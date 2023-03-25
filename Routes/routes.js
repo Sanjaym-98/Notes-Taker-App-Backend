@@ -64,22 +64,7 @@ router.delete("/notes",async(req,res)=>{
 })
 
 
-router.delete("/notes/:id",async(req,res)=>{
-    try{    
-      
-        const data = await Notes.deleteOne({_id:req.params.id})
-        res.status(201).json({
-            status:"Success",
-            message:"Posted successfuly",
-            data
-        })
-    }catch(e){
-        res.status(404).json({
-            status:"Failed",
-            message:e.message
-        })
-    }
-})
+
 
 
 router.delete("/notes/:id",async(req,res)=>{
